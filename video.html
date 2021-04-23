@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS缩略图全屏视频切换特效 - 站长图库</title>
+
+<link rel="stylesheet" href="css/video.css">
+<link rel="stylesheet" href="css/bottom.css">
+</head>
+<body>
+
+<section>
+	<video id="slider" autoplay muted loop>
+		<source src="https://klxxcdn.oss-cn-hangzhou.aliyuncs.com/histudy/hrm/media/video2.mp4" type="video/mp4"> 
+	</video>
+	<ul class="nav">
+	 <li onClick="videoUrl('video2.mp4')"><img src="images/imgs/thumb1.png" alt=""></li>
+	 <li onClick="videoUrl('video1.mp4')"><img src="images/imgs/thumb2.png" alt=""></li>
+	 <li onClick="videoUrl('video2.mp4')"><img src="images/imgs/thumb3.png" alt=""></li>
+	 <li onClick="videoUrl('video1.mp4')"><img src="images/imgs/thumb4.png" alt=""></li>
+	</ul>
+</section>
+
+<script type="text/javascript">
+	function videoUrl(url){
+		document.getElementById('slider').src=`https://klxxcdn.oss-cn-hangzhou.aliyuncs.com/histudy/hrm/media/${url}`
+	}
+</script>
+
+<!-- 由于视频1 是音频 所以无法播放，可以在这个ID固定路径上目录上传你的mp4播放文件 -->
+
+</body>
+</html>
